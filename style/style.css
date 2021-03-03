@@ -248,6 +248,7 @@ header {
 
 .intro {
     position: relative;
+    padding-bottom: 5%;
 }
 
 .intro__img {
@@ -390,8 +391,31 @@ header {
 
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
     /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+}
+
+.portfoliogrid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5px;
+}
+@media(min-width:600px){
+    .portfoliogrid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+    }
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#projectgrid{
+    padding-top: 0;
 }
 
 .portfolio__item {
